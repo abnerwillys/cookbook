@@ -1,1 +1,15 @@
 <h1>Livro de Receitas Abner</h1>
+
+<dl>
+  <% @recipes.each do |recipe| %>
+    <dt>
+      <strong>Name: </strong> <%= recipe.name %>
+    </dt>
+
+    <dd>
+      <strong>Recipe Type: </strong> <%= recipe.recipe_type %>
+    </dd>
+
+    <br />
+  <% end %>
+</dl>
