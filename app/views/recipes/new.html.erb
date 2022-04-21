@@ -1,0 +1,28 @@
+<%# O method cria uma instancia atrelando ao Model, e coloca dentro de uma variável escopada ao bloco %>
+<%= form_with model: @recipe do | form | %>
+  <%= form.label 'Name' %>
+  <%= form.text_field :name %> <%# Input do tipo TEXT e logo depois qual o attributo do model %>
+  <br />
+  
+  <%= form.label 'Recipe Type' %>
+  <%= form.text_field :recipe_type %>
+  <br />
+
+  <%= form.label 'Cuisine' %>
+  <%= form.text_field :cuisine %>
+  <br />
+
+  <%= form.label 'Ingredients' %>
+  <%= form.text_area :ingredients %>
+  <br />
+
+  <%= form.label 'Cook Method' %>
+  <%= form.text_field :cook_method %> <%# TEXTAREA e logo depois qual o attributo do model %>
+  <br />
+
+  <%= form.label 'Cook Time (min)' %>
+  <%= form.number_field :cook_time %> <%# Input do tipo NUMBER e logo depois qual o attributo do model %>
+  <br />
+
+  <%= form.submit 'Salvar' %> <%# Input do tipo SUBMIT e 'Salvar' é o nome que será exibido dentro %>
+<% end %>
