@@ -1,35 +1,7 @@
-<h1>Livro de Receitas Abner</h1>
+<h1>Book Recipes Abner</h1>
 
-<dl>
-  <% @recipes.each do |recipe| %>
-    <dt>
-      <strong>Name: </strong> <%= recipe.name %>
-    </dt>
+<% @recipes.each do |recipe| %>
+  
+  <%= link_to recipe.name, recipe  %> <br />
 
-    <dd>
-      <strong>Recipe Type: </strong> <%= recipe.recipe_type %>
-    </dd>
-    </dt>
-
-    <dd>
-      <strong>Cuisine: </strong> <%= recipe.cuisine || 'Não descrito'  %>
-    </dd>
-    </dt>
-
-    <dd>
-      <strong>Ingredients: </strong> <%= recipe.ingredients || 'Não descrito' %>
-    </dd>
-    </dt>
-
-    <dd>
-      <strong>Cook method: </strong> <%= recipe.cook_method || 'Não descrito'  %>
-    </dd>
-    </dt>
-
-    <dd>
-      <strong>Cook time: </strong> <%= recipe.cook_time || 'Não descrito'  %>
-    </dd>
-
-    <br />
-  <% end %>
-</dl>
+<% end %>
