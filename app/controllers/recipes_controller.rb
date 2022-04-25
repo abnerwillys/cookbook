@@ -45,4 +45,10 @@ class RecipesController < ApplicationController
 
     render :edit
   end
+
+  def publish
+    recipe = Recipe.find(params[:id])
+    recipe.published!
+    redirect_to recipe_path(recipe.id)
+  end
 end
