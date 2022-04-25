@@ -1,0 +1,21 @@
+<h1>Recipe Type Register</h1>
+
+
+<% if flash[:notice] %>
+  <div style="margin: 30px 0">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+
+<%# O method form_with cria uma instancia atrelando ao Model, e coloca dentro de uma variável escopada ao bloco %>
+<%= form_with model: @recipe_type do | form | %>
+  <div>
+    <%= form.label 'Name' %>
+    <%= form.text_field :name %> <%# Input do tipo TEXT e logo depois qual o attributo do model %>
+  </div>
+
+  <div>
+    <%= form.submit 'Salvar' %> <%# Input do tipo SUBMIT e 'Salvar' é o nome que será exibido dentro %>
+  </div>
+<% end %>

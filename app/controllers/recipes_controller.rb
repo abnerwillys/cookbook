@@ -10,8 +10,8 @@ class RecipesController < ApplicationController
   def create
     # The form data come inside of params
     @recipe = Recipe.new(
-      name: [:name],
-      recipe_type: params[:recipe][:recipe_type],
+      name: params[:recipe][:name],
+      recipe_type_id: params[:recipe][:recipe_type_id],
       cuisine: params[:recipe][:cuisine],
       ingredients: params[:recipe][:ingredients],
       cook_method: params[:recipe][:cook_method],

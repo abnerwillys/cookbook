@@ -5,7 +5,8 @@
   <br />
   
   <%= form.label 'Recipe Type' %>
-  <%= form.text_field :recipe_type %>
+  <%= form.collection_select :recipe_type_id, RecipeType.all, :id, :name %>
+
   <br />
 
   <%= form.label 'Cuisine' %>
